@@ -1,0 +1,698 @@
+2026-06-29 21:04:53.043 +03:00 [INF] User profile is available. Using 'C:\Users\Lenovo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-29 21:04:53.769 +03:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address https://127.0.0.1:7041: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-06-29 21:07:33.692 +03:00 [INF] User profile is available. Using 'C:\Users\Lenovo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-29 21:07:33.952 +03:00 [INF] Now listening on: https://localhost:7041
+2026-06-29 21:07:33.952 +03:00 [INF] Now listening on: http://localhost:5288
+2026-06-29 21:07:34.012 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-29 21:07:34.012 +03:00 [INF] Hosting environment: Development
+2026-06-29 21:07:34.012 +03:00 [INF] Content root path: C:\Users\Lenovo\Desktop\.net task\day4\University\University.API
+2026-06-29 21:07:34.772 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/swagger - null null
+2026-06-29 21:07:35.097 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/swagger - 301 null null 334.8744ms
+2026-06-29 21:07:35.098 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/swagger/index.html - null null
+2026-06-29 21:07:35.263 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/swagger/index.html - 200 null text/html;charset=utf-8 165.2343ms
+2026-06-29 21:07:35.322 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-29 21:07:35.323 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/_vs/browserLink - null null
+2026-06-29 21:07:35.338 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/_framework/aspnetcore-browser-refresh.js - 200 14895 application/javascript; charset=utf-8 17.2629ms
+2026-06-29 21:07:35.415 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/_vs/browserLink - 200 null text/javascript; charset=UTF-8 93.2405ms
+2026-06-29 21:07:35.720 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/swagger/v1/swagger.json - null null
+2026-06-29 21:07:35.762 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 42.8974ms
+2026-06-29 21:08:17.240 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Auth/register - application/json 128
+2026-06-29 21:08:17.276 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-06-29 21:08:17.353 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Register(University.Core.Forms.RegisterForm) on controller University.API.Controllers.AuthController (University.API).
+2026-06-29 21:08:20.941 +03:00 [INF] Executed DbCommand (130ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2026-06-29 21:08:21.027 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-06-29 21:08:21.397 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:08:21.456 +03:00 [INF] Executed action University.API.Controllers.AuthController.Register (University.API) in 4084.781ms
+2026-06-29 21:08:21.458 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-06-29 21:08:21.859 +03:00 [INF] Source:[127.0.0.1] Request: POST https localhost:7041/api/Auth/register  {
+  "firstName": "Nawar",
+  "lastName": "Al Tibi",
+  "email": "nawar@gmail.com",
+  "password": "Nawar123",
+  "role": "Student"
+} Responded with [400] in 4599ms
+2026-06-29 21:08:21.874 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Auth/register - 400 473 application/json 4634.1963ms
+2026-06-29 21:08:45.209 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Auth/register - application/json 130
+2026-06-29 21:08:45.212 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-06-29 21:08:45.213 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Register(University.Core.Forms.RegisterForm) on controller University.API.Controllers.AuthController (University.API).
+2026-06-29 21:08:45.319 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2026-06-29 21:08:45.325 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-06-29 21:08:45.498 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2026-06-29 21:08:45.879 +03:00 [INF] Executed DbCommand (46ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2026-06-29 21:08:45.955 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2026-06-29 21:08:46.030 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [UserRoles] AS [u]
+WHERE [u].[UserId] = @__p_0 AND [u].[RoleId] = @__p_1
+2026-06-29 21:08:46.040 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2026-06-29 21:08:46.078 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2026-06-29 21:08:46.181 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p18='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [UserId] = @p18 AND [ConcurrencyStamp] = @p19;
+2026-06-29 21:08:46.199 +03:00 [INF] User nawar@gmail.com registered with role Student
+2026-06-29 21:08:46.202 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:08:46.206 +03:00 [INF] Executed action University.API.Controllers.AuthController.Register (University.API) in 992.4302ms
+2026-06-29 21:08:46.206 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-06-29 21:08:46.239 +03:00 [INF] Source:[127.0.0.1] Request: POST https localhost:7041/api/Auth/register  {
+  "firstName": "Nawar",
+  "lastName": "Al Tibi",
+  "email": "nawar@gmail.com",
+  "password": "Nawar#123#",
+  "role": "Student"
+} Responded with [200] in 1027ms
+2026-06-29 21:08:46.240 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Auth/register - 200 468 application/json 1030.9603ms
+2026-06-29 21:09:18.796 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Auth/register - application/json 126
+2026-06-29 21:09:18.800 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-06-29 21:09:18.800 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Register(University.Core.Forms.RegisterForm) on controller University.API.Controllers.AuthController (University.API).
+2026-06-29 21:09:18.830 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2026-06-29 21:09:18.836 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-06-29 21:09:19.007 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2026-06-29 21:09:19.020 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2026-06-29 21:09:19.029 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2026-06-29 21:09:19.036 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [UserRoles] AS [u]
+WHERE [u].[UserId] = @__p_0 AND [u].[RoleId] = @__p_1
+2026-06-29 21:09:19.041 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2026-06-29 21:09:19.047 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2026-06-29 21:09:19.061 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p18='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [UserId] = @p18 AND [ConcurrencyStamp] = @p19;
+2026-06-29 21:09:19.063 +03:00 [INF] User sami@gmail.com registered with role Teacher
+2026-06-29 21:09:19.063 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:09:19.063 +03:00 [INF] Executed action University.API.Controllers.AuthController.Register (University.API) in 263.2213ms
+2026-06-29 21:09:19.063 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-06-29 21:09:19.064 +03:00 [INF] Source:[127.0.0.1] Request: POST https localhost:7041/api/Auth/register  {
+  "firstName": "Sami",
+  "lastName": "Hijazi",
+  "email": "sami@gmail.com",
+  "password": "Sami#123#",
+  "role": "Teacher"
+} Responded with [200] in 265ms
+2026-06-29 21:09:19.065 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Auth/register - 200 465 application/json 269.025ms
+2026-06-29 21:09:43.508 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Auth/login - application/json 82
+2026-06-29 21:09:43.509 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-06-29 21:09:43.517 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-06-29 21:09:43.546 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2026-06-29 21:09:43.774 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserClaimId], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [UserClaims] AS [u]
+WHERE [u].[UserId] = @__user_Id_0
+2026-06-29 21:09:43.851 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @__userId_0
+2026-06-29 21:09:43.860 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-06-29 21:09:43.876 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__role_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2026-06-29 21:09:43.907 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-06-29 21:09:43.914 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2026-06-29 21:09:43.920 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @__userId_0
+2026-06-29 21:09:43.973 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:09:43.973 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 456.405ms
+2026-06-29 21:09:43.974 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-06-29 21:09:43.975 +03:00 [INF] Source:[127.0.0.1] Request: POST https localhost:7041/api/Auth/login  {
+  "email": "nawar@gmail.com",
+  "password": "Nawar#123#",
+  "rememberMe": true
+} Responded with [200] in 466ms
+2026-06-29 21:09:43.976 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Auth/login - 200 576 application/json 467.8636ms
+2026-06-29 21:09:50.227 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Auth/login - application/json 81
+2026-06-29 21:09:50.228 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-06-29 21:09:50.228 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-06-29 21:09:50.236 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2026-06-29 21:09:50.514 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:09:50.515 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 287.1167ms
+2026-06-29 21:09:50.515 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-06-29 21:09:50.516 +03:00 [INF] Source:[127.0.0.1] Request: POST https localhost:7041/api/Auth/login  {
+  "email": "nawar@gmail.com",
+  "password": "Nawar#123",
+  "rememberMe": true
+} Responded with [400] in 288ms
+2026-06-29 21:09:50.516 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Auth/login - 400 310 application/json 289.5962ms
+2026-06-29 21:10:01.196 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Auth/login - application/json 82
+2026-06-29 21:10:01.196 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-06-29 21:10:01.196 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-06-29 21:10:01.204 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2026-06-29 21:10:01.373 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserClaimId], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [UserClaims] AS [u]
+WHERE [u].[UserId] = @__user_Id_0
+2026-06-29 21:10:01.378 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @__userId_0
+2026-06-29 21:10:01.382 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-06-29 21:10:01.386 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2026-06-29 21:10:01.395 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-06-29 21:10:01.400 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2026-06-29 21:10:01.404 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @__userId_0
+2026-06-29 21:10:01.405 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:10:01.406 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 209.2696ms
+2026-06-29 21:10:01.406 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-06-29 21:10:01.406 +03:00 [INF] Source:[127.0.0.1] Request: POST https localhost:7041/api/Auth/login  {
+  "email": "nawar@gmail.com",
+  "password": "Nawar#123#",
+  "rememberMe": true
+} Responded with [200] in 210ms
+2026-06-29 21:10:01.407 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Auth/login - 200 576 application/json 211.4691ms
+2026-06-29 21:20:32.206 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Courses - null null
+2026-06-29 21:20:32.222 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Student)
+2026-06-29 21:20:32.232 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-29 21:20:32.232 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Courses - 401 0 null 27.7004ms
+2026-06-29 21:20:53.302 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Auth/login - application/json 82
+2026-06-29 21:20:53.303 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-06-29 21:20:53.303 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-06-29 21:20:53.466 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2026-06-29 21:20:53.628 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserClaimId], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [UserClaims] AS [u]
+WHERE [u].[UserId] = @__user_Id_0
+2026-06-29 21:20:53.640 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @__userId_0
+2026-06-29 21:20:53.647 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-06-29 21:20:53.679 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[@__role_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2026-06-29 21:20:53.681 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-06-29 21:20:53.686 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2026-06-29 21:20:53.691 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @__userId_0
+2026-06-29 21:20:53.694 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:20:53.695 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 391.3245ms
+2026-06-29 21:20:53.695 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-06-29 21:20:53.697 +03:00 [INF] Source:[127.0.0.1] Request: POST https localhost:7041/api/Auth/login  {
+  "email": "nawar@gmail.com",
+  "password": "Nawar#123#",
+  "rememberMe": true
+} Responded with [200] in 393ms
+2026-06-29 21:20:53.697 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Auth/login - 200 576 application/json 396.0664ms
+2026-06-29 21:21:12.050 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Auth/me - null null
+2026-06-29 21:21:12.053 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-06-29 21:21:12.053 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-29 21:21:12.053 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Auth/me - 401 0 null 2.7892ms
+2026-06-29 21:21:14.294 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Auth/me - null null
+2026-06-29 21:21:14.295 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-06-29 21:21:14.295 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-29 21:21:14.295 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Auth/me - 401 0 null 1.4778ms
+2026-06-29 21:21:30.126 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Auth/me - null null
+2026-06-29 21:21:30.126 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-06-29 21:21:30.126 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-29 21:21:30.126 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Auth/me - 401 0 null 0.6802ms
+2026-06-29 21:22:06.630 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Courses - null null
+2026-06-29 21:22:06.632 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Student)
+2026-06-29 21:22:06.633 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-29 21:22:06.634 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Courses - 401 0 null 3.3218ms
+2026-06-29 21:22:29.608 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Courses - application/json 38
+2026-06-29 21:22:29.613 +03:00 [INF] Executing endpoint 'University.API.Controllers.CoursesController.Create (University.API)'
+2026-06-29 21:22:29.616 +03:00 [INF] Route matched with {action = "Create", controller = "Courses"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Create(University.Core.Forms.CreateCourseForm) on controller University.API.Controllers.CoursesController (University.API).
+2026-06-29 21:22:29.631 +03:00 [INF] Incoming request: POST /api/courses
+2026-06-29 21:22:29.632 +03:00 [INF] Attempting to create course with Name: React, Weight: 100
+2026-06-29 21:22:29.687 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Courses] ([Name], [Weight])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2026-06-29 21:22:29.700 +03:00 [INF] Successfully created course with ID: 1
+2026-06-29 21:22:29.700 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:22:29.701 +03:00 [INF] Executed action University.API.Controllers.CoursesController.Create (University.API) in 84.3291ms
+2026-06-29 21:22:29.701 +03:00 [INF] Executed endpoint 'University.API.Controllers.CoursesController.Create (University.API)'
+2026-06-29 21:22:29.702 +03:00 [INF] Source:[127.0.0.1] Request: POST https localhost:7041/api/Courses  {
+  "name": "React",
+  "weight": 100
+} Responded with [200] in 89ms
+2026-06-29 21:22:29.702 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Courses - 200 238 application/json 94.0508ms
+2026-06-29 21:22:38.407 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Courses - null null
+2026-06-29 21:22:38.407 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Student)
+2026-06-29 21:22:38.408 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-29 21:22:38.408 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Courses - 401 0 null 0.9296ms
+2026-06-29 21:22:39.278 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Courses - null null
+2026-06-29 21:22:39.279 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Student)
+2026-06-29 21:22:39.279 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-29 21:22:39.279 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Courses - 401 0 null 1.1208ms
+2026-06-29 21:24:53.719 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Auth/me - null null
+2026-06-29 21:24:53.821 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Me (University.API)'
+2026-06-29 21:24:53.824 +03:00 [INF] Route matched with {action = "Me", controller = "Auth"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Me() on controller University.API.Controllers.AuthController (University.API).
+2026-06-29 21:24:53.827 +03:00 [INF] Current user - Id: 3, Role: Student
+2026-06-29 21:24:53.828 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:24:53.833 +03:00 [INF] Executed action University.API.Controllers.AuthController.Me (University.API) in 8.9887ms
+2026-06-29 21:24:53.833 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Me (University.API)'
+2026-06-29 21:24:53.834 +03:00 [INF] Source:[127.0.0.1] Request: GET https localhost:7041/api/Auth/me   Responded with [200] in 12ms
+2026-06-29 21:24:53.834 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Auth/me - 200 289 application/json 115.5947ms
+2026-06-29 21:24:57.741 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Courses - null null
+2026-06-29 21:24:57.743 +03:00 [INF] Executing endpoint 'University.API.Controllers.CoursesController.GetAll (University.API)'
+2026-06-29 21:24:57.744 +03:00 [INF] Route matched with {action = "GetAll", controller = "Courses"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetAll() on controller University.API.Controllers.CoursesController (University.API).
+2026-06-29 21:24:57.745 +03:00 [INF] Incoming request: GET /api/courses
+2026-06-29 21:24:57.746 +03:00 [INF] Attempting to retrieve all courses
+2026-06-29 21:24:57.778 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[Weight]
+FROM [Courses] AS [c]
+2026-06-29 21:24:57.781 +03:00 [INF] Successfully retrieved 1 courses
+2026-06-29 21:24:57.781 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:24:57.785 +03:00 [INF] Executed action University.API.Controllers.CoursesController.GetAll (University.API) in 40.3422ms
+2026-06-29 21:24:57.785 +03:00 [INF] Executed endpoint 'University.API.Controllers.CoursesController.GetAll (University.API)'
+2026-06-29 21:24:57.785 +03:00 [INF] Source:[127.0.0.1] Request: GET https localhost:7041/api/Courses   Responded with [200] in 42ms
+2026-06-29 21:24:57.785 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Courses - 200 296 application/json 45.4266ms
+2026-06-29 21:25:34.689 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Auth/me - null null
+2026-06-29 21:25:34.692 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-06-29 21:25:34.692 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-29 21:25:34.692 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Auth/me - 401 0 null 2.8658ms
+2026-06-29 21:26:00.830 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Courses - null null
+2026-06-29 21:26:00.830 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Student)
+2026-06-29 21:26:00.830 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-29 21:26:00.830 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Courses - 401 0 null 1.0955ms
+2026-06-29 21:26:21.992 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Auth/me - null null
+2026-06-29 21:26:22.058 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-06-29 21:26:22.059 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-06-29 21:26:22.059 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-06-29 21:26:22.061 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-29 21:26:22.061 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Auth/me - 401 0 null 68.9927ms
+2026-06-29 21:26:24.693 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Auth/me - null null
+2026-06-29 21:26:24.694 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-06-29 21:26:24.695 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-06-29 21:26:24.695 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-06-29 21:26:24.695 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-29 21:26:24.695 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Auth/me - 401 0 null 3.5223ms
+2026-06-29 21:26:43.346 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Auth/login - application/json 82
+2026-06-29 21:26:43.347 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-06-29 21:26:43.347 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-06-29 21:26:43.370 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2026-06-29 21:26:43.512 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserClaimId], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [UserClaims] AS [u]
+WHERE [u].[UserId] = @__user_Id_0
+2026-06-29 21:26:43.522 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @__userId_0
+2026-06-29 21:26:43.526 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-06-29 21:26:43.534 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2026-06-29 21:26:43.535 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-06-29 21:26:43.547 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2026-06-29 21:26:43.550 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @__userId_0
+2026-06-29 21:26:43.551 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:26:43.551 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 204.1428ms
+2026-06-29 21:26:43.552 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-06-29 21:26:43.553 +03:00 [INF] Source:[127.0.0.1] Request: POST https localhost:7041/api/Auth/login  {
+  "email": "nawar@gmail.com",
+  "password": "Nawar#123#",
+  "rememberMe": true
+} Responded with [200] in 205ms
+2026-06-29 21:26:43.553 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Auth/login - 200 576 application/json 206.6891ms
+2026-06-29 21:26:55.614 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Auth/me - null null
+2026-06-29 21:26:55.614 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-06-29 21:26:55.614 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-29 21:26:55.615 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Auth/me - 401 0 null 0.7118ms
+2026-06-29 21:27:06.811 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Auth/me - null null
+2026-06-29 21:27:06.813 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Me (University.API)'
+2026-06-29 21:27:06.813 +03:00 [INF] Route matched with {action = "Me", controller = "Auth"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Me() on controller University.API.Controllers.AuthController (University.API).
+2026-06-29 21:27:06.814 +03:00 [INF] Current user - Id: 3, Role: Student
+2026-06-29 21:27:06.814 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:27:06.814 +03:00 [INF] Executed action University.API.Controllers.AuthController.Me (University.API) in 0.9862ms
+2026-06-29 21:27:06.814 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Me (University.API)'
+2026-06-29 21:27:06.815 +03:00 [INF] Source:[127.0.0.1] Request: GET https localhost:7041/api/Auth/me   Responded with [200] in 1ms
+2026-06-29 21:27:06.815 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Auth/me - 200 289 application/json 4.2305ms
+2026-06-29 21:27:29.399 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/swagger/index.html - null null
+2026-06-29 21:27:29.423 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/swagger/index.html - 200 null text/html;charset=utf-8 24.3393ms
+2026-06-29 21:27:29.458 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/_vs/browserLink - null null
+2026-06-29 21:27:29.461 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-29 21:27:29.463 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/_framework/aspnetcore-browser-refresh.js - 200 14895 application/javascript; charset=utf-8 3.2351ms
+2026-06-29 21:27:29.485 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.2998ms
+2026-06-29 21:27:29.592 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/swagger/v1/swagger.json - null null
+2026-06-29 21:27:29.621 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 29.105ms
+2026-06-29 21:27:49.310 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Auth/login - application/json 82
+2026-06-29 21:27:49.311 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-06-29 21:27:49.312 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-06-29 21:27:49.333 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2026-06-29 21:27:49.492 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserClaimId], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [UserClaims] AS [u]
+WHERE [u].[UserId] = @__user_Id_0
+2026-06-29 21:27:49.499 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @__userId_0
+2026-06-29 21:27:49.503 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-06-29 21:27:49.506 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2026-06-29 21:27:49.507 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-06-29 21:27:49.511 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2026-06-29 21:27:49.514 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @__userId_0
+2026-06-29 21:27:49.515 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:27:49.515 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 203.4597ms
+2026-06-29 21:27:49.515 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-06-29 21:27:49.516 +03:00 [INF] Source:[127.0.0.1] Request: POST https localhost:7041/api/Auth/login  {
+  "email": "nawar@gmail.com",
+  "password": "Nawar#123#",
+  "rememberMe": true
+} Responded with [200] in 204ms
+2026-06-29 21:27:49.516 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Auth/login - 200 576 application/json 206.3503ms
+2026-06-29 21:28:14.878 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Auth/me - null null
+2026-06-29 21:28:14.880 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Me (University.API)'
+2026-06-29 21:28:14.880 +03:00 [INF] Route matched with {action = "Me", controller = "Auth"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Me() on controller University.API.Controllers.AuthController (University.API).
+2026-06-29 21:28:14.881 +03:00 [INF] Current user - Id: 3, Role: Student
+2026-06-29 21:28:14.881 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:28:14.881 +03:00 [INF] Executed action University.API.Controllers.AuthController.Me (University.API) in 1.0697ms
+2026-06-29 21:28:14.881 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Me (University.API)'
+2026-06-29 21:28:14.882 +03:00 [INF] Source:[127.0.0.1] Request: GET https localhost:7041/api/Auth/me   Responded with [200] in 2ms
+2026-06-29 21:28:14.882 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Auth/me - 200 289 application/json 4.7694ms
+2026-06-29 21:28:20.842 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Courses - null null
+2026-06-29 21:28:20.843 +03:00 [INF] Executing endpoint 'University.API.Controllers.CoursesController.GetAll (University.API)'
+2026-06-29 21:28:20.843 +03:00 [INF] Route matched with {action = "GetAll", controller = "Courses"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetAll() on controller University.API.Controllers.CoursesController (University.API).
+2026-06-29 21:28:20.843 +03:00 [INF] Incoming request: GET /api/courses
+2026-06-29 21:28:20.844 +03:00 [INF] Attempting to retrieve all courses
+2026-06-29 21:28:20.847 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[Weight]
+FROM [Courses] AS [c]
+2026-06-29 21:28:20.847 +03:00 [INF] Successfully retrieved 1 courses
+2026-06-29 21:28:20.847 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:28:20.848 +03:00 [INF] Executed action University.API.Controllers.CoursesController.GetAll (University.API) in 4.3257ms
+2026-06-29 21:28:20.848 +03:00 [INF] Executed endpoint 'University.API.Controllers.CoursesController.GetAll (University.API)'
+2026-06-29 21:28:20.848 +03:00 [INF] Source:[127.0.0.1] Request: GET https localhost:7041/api/Courses   Responded with [200] in 4ms
+2026-06-29 21:28:20.848 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Courses - 200 296 application/json 6.2507ms
+2026-06-29 21:28:54.296 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Students - null null
+2026-06-29 21:28:54.297 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.GetAll (University.API)'
+2026-06-29 21:28:54.300 +03:00 [INF] Route matched with {action = "GetAll", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetAll() on controller University.API.Controllers.StudentsController (University.API).
+2026-06-29 21:28:54.306 +03:00 [INF] Incoming request: GET /api/students
+2026-06-29 21:28:54.306 +03:00 [INF] Attempting to retrieve all students
+2026-06-29 21:28:54.333 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+2026-06-29 21:28:54.347 +03:00 [INF] Successfully retrieved 1 students
+2026-06-29 21:28:54.347 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:28:54.352 +03:00 [INF] Executed action University.API.Controllers.StudentsController.GetAll (University.API) in 52.4878ms
+2026-06-29 21:28:54.352 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.GetAll (University.API)'
+2026-06-29 21:28:54.353 +03:00 [INF] Source:[127.0.0.1] Request: GET https localhost:7041/api/Students   Responded with [200] in 56ms
+2026-06-29 21:28:54.353 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Students - 200 310 application/json 57.7143ms
+2026-06-29 21:29:16.721 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Students - application/json 51
+2026-06-29 21:29:16.722 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Teacher)
+2026-06-29 21:29:16.727 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-06-29 21:29:16.727 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Students - 403 0 null 6.3083ms
+2026-06-29 21:29:33.318 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Auth/login - application/json 80
+2026-06-29 21:29:33.322 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-06-29 21:29:33.322 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-06-29 21:29:33.345 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2026-06-29 21:29:33.461 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserClaimId], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [UserClaims] AS [u]
+WHERE [u].[UserId] = @__user_Id_0
+2026-06-29 21:29:33.468 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @__userId_0
+2026-06-29 21:29:33.472 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2026-06-29 21:29:33.477 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__role_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2026-06-29 21:29:33.478 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-06-29 21:29:33.482 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2026-06-29 21:29:33.484 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @__userId_0
+2026-06-29 21:29:33.485 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:29:33.485 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 163.0423ms
+2026-06-29 21:29:33.485 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-06-29 21:29:33.486 +03:00 [INF] Source:[127.0.0.1] Request: POST https localhost:7041/api/Auth/login  {
+  "email": "sami@gmail.com",
+  "password": "Sami#123#",
+  "rememberMe": true
+} Responded with [200] in 165ms
+2026-06-29 21:29:33.486 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Auth/login - 200 575 application/json 168.0274ms
+2026-06-29 21:29:50.772 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Auth/me - null null
+2026-06-29 21:29:50.773 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Me (University.API)'
+2026-06-29 21:29:50.773 +03:00 [INF] Route matched with {action = "Me", controller = "Auth"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Me() on controller University.API.Controllers.AuthController (University.API).
+2026-06-29 21:29:50.774 +03:00 [INF] Current user - Id: 4, Role: Teacher
+2026-06-29 21:29:50.774 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:29:50.774 +03:00 [INF] Executed action University.API.Controllers.AuthController.Me (University.API) in 0.7041ms
+2026-06-29 21:29:50.774 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Me (University.API)'
+2026-06-29 21:29:50.775 +03:00 [INF] Source:[127.0.0.1] Request: GET https localhost:7041/api/Auth/me   Responded with [200] in 1ms
+2026-06-29 21:29:50.775 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Auth/me - 200 288 application/json 2.6716ms
+2026-06-29 21:30:01.731 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Students - application/json 51
+2026-06-29 21:30:01.731 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.Create (University.API)'
+2026-06-29 21:30:01.733 +03:00 [INF] Route matched with {action = "Create", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Create(University.Core.Forms.CreateStudentForm) on controller University.API.Controllers.StudentsController (University.API).
+2026-06-29 21:30:01.738 +03:00 [INF] Incoming request: POST /api/students
+2026-06-29 21:30:01.739 +03:00 [INF] Attempting to create student with Name: Mayar, Email: mayar@gmail.com
+2026-06-29 21:30:01.798 +03:00 [INF] Executed DbCommand (45ms) [Parameters=[@__email_0='?' (Size = 150)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Email] = @__email_0
+2026-06-29 21:30:01.810 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 150), @p1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Students] ([Email], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2026-06-29 21:30:01.813 +03:00 [INF] Successfully created student with ID: 2
+2026-06-29 21:30:01.813 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:30:01.813 +03:00 [INF] Executed action University.API.Controllers.StudentsController.Create (University.API) in 80.342ms
+2026-06-29 21:30:01.813 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.Create (University.API)'
+2026-06-29 21:30:01.814 +03:00 [INF] Source:[127.0.0.1] Request: POST https localhost:7041/api/Students  {
+  "name": "Mayar",
+  "email": "mayar@gmail.com"
+} Responded with [200] in 82ms
+2026-06-29 21:30:01.814 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Students - 200 239 application/json 83.4678ms
+2026-06-29 21:30:15.638 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Courses - null null
+2026-06-29 21:30:15.639 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Student)
+2026-06-29 21:30:15.639 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-06-29 21:30:15.639 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Courses - 403 0 null 1.7626ms
+2026-06-29 21:30:18.163 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Courses - null null
+2026-06-29 21:30:18.164 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Student)
+2026-06-29 21:30:18.164 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-06-29 21:30:18.164 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Courses - 403 0 null 1.9743ms
+2026-06-29 21:30:54.724 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Students - null null
+2026-06-29 21:30:54.726 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.GetAll (University.API)'
+2026-06-29 21:30:54.726 +03:00 [INF] Route matched with {action = "GetAll", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetAll() on controller University.API.Controllers.StudentsController (University.API).
+2026-06-29 21:30:54.726 +03:00 [INF] Incoming request: GET /api/students
+2026-06-29 21:30:54.728 +03:00 [INF] Attempting to retrieve all students
+2026-06-29 21:30:54.738 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+2026-06-29 21:30:54.739 +03:00 [INF] Successfully retrieved 2 students
+2026-06-29 21:30:54.739 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-29 21:30:54.739 +03:00 [INF] Executed action University.API.Controllers.StudentsController.GetAll (University.API) in 13.1608ms
+2026-06-29 21:30:54.739 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.GetAll (University.API)'
+2026-06-29 21:30:54.740 +03:00 [INF] Source:[127.0.0.1] Request: GET https localhost:7041/api/Students   Responded with [200] in 14ms
+2026-06-29 21:30:54.740 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Students - 200 409 application/json 16.3721ms

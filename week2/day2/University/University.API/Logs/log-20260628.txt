@@ -1,0 +1,511 @@
+2026-06-28 17:11:05.451 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-06-28 17:11:05.489 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-06-28 17:11:05.491 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-06-28 17:11:05.492 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-06-28 17:11:05.525 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-06-28 17:11:05.533 +03:00 [INF] Applying migration '20260628141030_AddCourseTable'.
+2026-06-28 17:11:05.576 +03:00 [ERR] Failed executing DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Courses] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Weight] int NOT NULL,
+    CONSTRAINT [PK_Courses] PRIMARY KEY ([Id])
+);
+2026-06-28 20:47:36.061 +03:00 [INF] Now listening on: https://localhost:7041
+2026-06-28 20:47:36.106 +03:00 [INF] Now listening on: http://localhost:5288
+2026-06-28 20:47:36.177 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-28 20:47:36.177 +03:00 [INF] Hosting environment: Development
+2026-06-28 20:47:36.177 +03:00 [INF] Content root path: C:\Users\Lenovo\Desktop\.net task\day4\University\University.API
+2026-06-28 20:47:37.921 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/swagger - null null
+2026-06-28 20:47:38.447 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/swagger - 301 null null 572.72ms
+2026-06-28 20:47:38.450 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/swagger/index.html - null null
+2026-06-28 20:47:38.774 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/swagger/index.html - 200 null text/html;charset=utf-8 323.3363ms
+2026-06-28 20:47:38.803 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-28 20:47:38.805 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/_vs/browserLink - null null
+2026-06-28 20:47:38.822 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/_framework/aspnetcore-browser-refresh.js - 200 14895 application/javascript; charset=utf-8 18.4032ms
+2026-06-28 20:47:38.953 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/_vs/browserLink - 200 null text/javascript; charset=UTF-8 148.097ms
+2026-06-28 20:47:39.072 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/swagger/v1/swagger.json - null null
+2026-06-28 20:47:39.166 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 94.8935ms
+2026-06-28 20:48:31.687 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Students - application/json 59
+2026-06-28 20:48:31.741 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.Create (University.API)'
+2026-06-28 20:48:31.839 +03:00 [INF] Route matched with {action = "Create", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Create(University.Core.Forms.CreateStudentForm) on controller University.API.Controllers.StudentsController (University.API).
+2026-06-28 20:48:32.415 +03:00 [INF] Incoming request: POST /api/students
+2026-06-28 20:48:32.418 +03:00 [INF] Attempting to create student with Name: Nawar Al Tibi, Email: nawar@gmail.com
+2026-06-28 20:48:36.169 +03:00 [INF] Executed DbCommand (146ms) [Parameters=[@__email_0='?' (Size = 150)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Email] = @__email_0
+2026-06-28 20:48:36.646 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[@p0='?' (Size = 150), @p1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Students] ([Email], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2026-06-28 20:48:36.710 +03:00 [INF] Successfully created student with ID: 2
+2026-06-28 20:48:36.727 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-28 20:48:36.758 +03:00 [INF] Executed action University.API.Controllers.StudentsController.Create (University.API) in 4909.6091ms
+2026-06-28 20:48:36.759 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.Create (University.API)'
+2026-06-28 20:48:37.375 +03:00 [INF] Source:[127.0.0.1] Request: POST https localhost:7041/api/Students  {
+  "name": "Nawar Al Tibi",
+  "email": "nawar@gmail.com"
+} Responded with [200] in 5663ms
+2026-06-28 20:48:37.398 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Students - 200 239 application/json 5711.3146ms
+2026-06-28 20:48:53.195 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Students - null null
+2026-06-28 20:48:53.201 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.GetAll (University.API)'
+2026-06-28 20:48:53.241 +03:00 [INF] Route matched with {action = "GetAll", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetAll() on controller University.API.Controllers.StudentsController (University.API).
+2026-06-28 20:48:53.244 +03:00 [INF] Incoming request: GET /api/students
+2026-06-28 20:48:53.246 +03:00 [INF] Attempting to retrieve all students
+2026-06-28 20:48:53.318 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+2026-06-28 20:48:53.330 +03:00 [INF] Successfully retrieved 1 students
+2026-06-28 20:48:53.331 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-28 20:48:53.343 +03:00 [INF] Executed action University.API.Controllers.StudentsController.GetAll (University.API) in 101.8614ms
+2026-06-28 20:48:53.343 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.GetAll (University.API)'
+2026-06-28 20:48:53.349 +03:00 [INF] Source:[127.0.0.1] Request: GET https localhost:7041/api/Students   Responded with [200] in 148ms
+2026-06-28 20:48:53.350 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Students - 200 317 application/json 155.9148ms
+2026-06-28 20:49:27.187 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Students/2 - null null
+2026-06-28 20:49:27.194 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.GetById (University.API)'
+2026-06-28 20:49:27.227 +03:00 [INF] Route matched with {action = "GetById", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetById(Int32) on controller University.API.Controllers.StudentsController (University.API).
+2026-06-28 20:49:27.239 +03:00 [INF] Incoming request: GET /api/students/2
+2026-06-28 20:49:27.240 +03:00 [INF] Attempting to retrieve student with ID: 2
+2026-06-28 20:49:27.539 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__p_0
+2026-06-28 20:49:27.541 +03:00 [INF] Successfully retrieved student with ID: 2
+2026-06-28 20:49:27.541 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-28 20:49:27.542 +03:00 [INF] Executed action University.API.Controllers.StudentsController.GetById (University.API) in 314.1243ms
+2026-06-28 20:49:27.542 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.GetById (University.API)'
+2026-06-28 20:49:27.543 +03:00 [INF] Source:[127.0.0.1] Request: GET https localhost:7041/api/Students/2   Responded with [200] in 349ms
+2026-06-28 20:49:27.545 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Students/2 - 200 293 application/json 358.7425ms
+2026-06-28 20:50:01.094 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7041/api/Students/2 - application/json 53
+2026-06-28 20:50:01.099 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.Update (University.API)'
+2026-06-28 20:50:01.104 +03:00 [INF] Route matched with {action = "Update", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Update(Int32, University.Core.Forms.UpdateStudentForm) on controller University.API.Controllers.StudentsController (University.API).
+2026-06-28 20:50:01.114 +03:00 [INF] Incoming request: PUT /api/students/2
+2026-06-28 20:50:01.117 +03:00 [INF] Attempting to update student with ID: 2
+2026-06-28 20:50:01.140 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__p_0
+2026-06-28 20:50:01.170 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[@__email_0='?' (Size = 150)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Email] = @__email_0
+2026-06-28 20:50:01.201 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 150), @p1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Students] SET [Email] = @p0, [Name] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2026-06-28 20:50:01.203 +03:00 [INF] Successfully updated student with ID: 2
+2026-06-28 20:50:01.203 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-28 20:50:01.203 +03:00 [INF] Executed action University.API.Controllers.StudentsController.Update (University.API) in 99.1166ms
+2026-06-28 20:50:01.203 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.Update (University.API)'
+2026-06-28 20:50:01.204 +03:00 [INF] Source:[127.0.0.1] Request: PUT https localhost:7041/api/Students/2  {
+  "name": "NawarTb",
+  "email": "nawar@gmail.com"
+} Responded with [200] in 107ms
+2026-06-28 20:50:01.204 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7041/api/Students/2 - 200 238 application/json 111.044ms
+2026-06-28 20:50:17.540 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7041/api/Students/2 - null null
+2026-06-28 20:50:17.541 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.Delete (University.API)'
+2026-06-28 20:50:17.544 +03:00 [INF] Route matched with {action = "Delete", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Delete(Int32) on controller University.API.Controllers.StudentsController (University.API).
+2026-06-28 20:50:17.546 +03:00 [INF] Incoming request: DELETE /api/students/2
+2026-06-28 20:50:17.547 +03:00 [INF] Attempting to delete student with ID: 2
+2026-06-28 20:50:17.554 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__p_0
+2026-06-28 20:50:17.620 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Students]
+OUTPUT 1
+WHERE [Id] = @p0;
+2026-06-28 20:50:17.627 +03:00 [INF] Successfully deleted student with ID: 2
+2026-06-28 20:50:17.628 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-28 20:50:17.628 +03:00 [INF] Executed action University.API.Controllers.StudentsController.Delete (University.API) in 84.1539ms
+2026-06-28 20:50:17.628 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.Delete (University.API)'
+2026-06-28 20:50:17.629 +03:00 [INF] Source:[127.0.0.1] Request: DELETE https localhost:7041/api/Students/2   Responded with [200] in 88ms
+2026-06-28 20:50:17.630 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7041/api/Students/2 - 200 241 application/json 89.7967ms
+2026-06-28 20:50:55.419 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Courses - application/json 45
+2026-06-28 20:50:55.422 +03:00 [INF] Executing endpoint 'University.API.Controllers.CoursesController.Create (University.API)'
+2026-06-28 20:50:55.440 +03:00 [INF] Route matched with {action = "Create", controller = "Courses"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Create(University.Core.Forms.CreateCourseForm) on controller University.API.Controllers.CoursesController (University.API).
+2026-06-28 20:50:55.493 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-06-28 20:50:55.560 +03:00 [INF] Executed action University.API.Controllers.CoursesController.Create (University.API) in 109.2803ms
+2026-06-28 20:50:55.560 +03:00 [INF] Executed endpoint 'University.API.Controllers.CoursesController.Create (University.API)'
+2026-06-28 20:50:55.591 +03:00 [INF] Source:[127.0.0.1] Request: POST https localhost:7041/api/Courses  {
+  "name": "React Course",
+  "weight": 200
+} Responded with [400] in 169ms
+2026-06-28 20:50:55.591 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Courses - 400 430 application/json 172.4809ms
+2026-06-28 20:51:12.206 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Courses - application/json 44
+2026-06-28 20:51:12.207 +03:00 [INF] Executing endpoint 'University.API.Controllers.CoursesController.Create (University.API)'
+2026-06-28 20:51:12.207 +03:00 [INF] Route matched with {action = "Create", controller = "Courses"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Create(University.Core.Forms.CreateCourseForm) on controller University.API.Controllers.CoursesController (University.API).
+2026-06-28 20:51:12.211 +03:00 [INF] Incoming request: POST /api/courses
+2026-06-28 20:51:12.212 +03:00 [INF] Attempting to create course with Name: React Course, Weight: 50
+2026-06-28 20:51:12.277 +03:00 [ERR] Failed executing DbCommand (31ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Courses] ([Name], [Weight])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2026-06-28 20:51:12.373 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'University.Data.UniversityDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Name'.
+Invalid column name 'Weight'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:b75f1897-f637-4d1f-adad-44736b79c773
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Name'.
+Invalid column name 'Weight'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:b75f1897-f637-4d1f-adad-44736b79c773
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2026-06-28 20:51:12.711 +03:00 [ERR] Error occurred while creating course with Name: React Course
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Name'.
+Invalid column name 'Weight'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:b75f1897-f637-4d1f-adad-44736b79c773
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at University.Data.Repositories.CourseRepository.Add(Course course) in C:\Users\Lenovo\Desktop\.net task\day4\University\University.Data\Repositories\CourseRepository.cs:line 30
+   at University.Core.Services.CourseService.Create(CreateCourseForm form) in C:\Users\Lenovo\Desktop\.net task\day4\University\University.Core\Services\CourseService.cs:line 74
+2026-06-28 21:04:44.313 +03:00 [INF] Now listening on: https://localhost:7041
+2026-06-28 21:04:44.432 +03:00 [INF] Now listening on: http://localhost:5288
+2026-06-28 21:04:44.676 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-28 21:04:44.677 +03:00 [INF] Hosting environment: Development
+2026-06-28 21:04:44.677 +03:00 [INF] Content root path: C:\Users\Lenovo\Desktop\.net task\day4\University\University.API
+2026-06-28 21:04:46.344 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/swagger - null null
+2026-06-28 21:04:46.790 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/swagger - 301 null null 480.9636ms
+2026-06-28 21:04:46.869 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/swagger/index.html - null null
+2026-06-28 21:04:47.166 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/swagger/index.html - 200 null text/html;charset=utf-8 297.5086ms
+2026-06-28 21:04:47.245 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-28 21:04:47.265 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/_vs/browserLink - null null
+2026-06-28 21:04:47.267 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/_framework/aspnetcore-browser-refresh.js - 200 14895 application/javascript; charset=utf-8 25.8287ms
+2026-06-28 21:04:47.397 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/_vs/browserLink - 200 null text/javascript; charset=UTF-8 132.7421ms
+2026-06-28 21:04:48.108 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/swagger/v1/swagger.json - null null
+2026-06-28 21:04:48.200 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 91.4234ms
+2026-06-28 21:30:43.183 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Courses - application/json 38
+2026-06-28 21:30:43.324 +03:00 [INF] Executing endpoint 'University.API.Controllers.CoursesController.Create (University.API)'
+2026-06-28 21:30:43.455 +03:00 [INF] Route matched with {action = "Create", controller = "Courses"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Create(University.Core.Forms.CreateCourseForm) on controller University.API.Controllers.CoursesController (University.API).
+2026-06-28 21:30:43.947 +03:00 [INF] Incoming request: POST /api/courses
+2026-06-28 21:30:43.948 +03:00 [INF] Attempting to create course with Name: React, Weight: 100
+2026-06-28 21:30:46.122 +03:00 [INF] Executed DbCommand (112ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Courses] ([Name], [Weight])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2026-06-28 21:30:46.195 +03:00 [INF] Successfully created course with ID: 2
+2026-06-28 21:30:46.209 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-28 21:30:46.238 +03:00 [INF] Executed action University.API.Controllers.CoursesController.Create (University.API) in 2775.8049ms
+2026-06-28 21:30:46.239 +03:00 [INF] Executed endpoint 'University.API.Controllers.CoursesController.Create (University.API)'
+2026-06-28 21:30:46.605 +03:00 [INF] Source:[127.0.0.1] Request: POST https localhost:7041/api/Courses  {
+  "name": "React",
+  "weight": 100
+} Responded with [200] in 3357ms
+2026-06-28 21:30:46.628 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Courses - 200 238 application/json 3456.3005ms
+2026-06-28 21:31:00.177 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Courses - null null
+2026-06-28 21:31:00.183 +03:00 [INF] Executing endpoint 'University.API.Controllers.CoursesController.GetAll (University.API)'
+2026-06-28 21:31:00.188 +03:00 [INF] Route matched with {action = "GetAll", controller = "Courses"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetAll() on controller University.API.Controllers.CoursesController (University.API).
+2026-06-28 21:31:00.190 +03:00 [INF] Incoming request: GET /api/courses
+2026-06-28 21:31:00.191 +03:00 [INF] Attempting to retrieve all courses
+2026-06-28 21:31:00.705 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[Weight]
+FROM [Courses] AS [c]
+2026-06-28 21:31:00.716 +03:00 [INF] Successfully retrieved 1 courses
+2026-06-28 21:31:00.717 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-28 21:31:00.726 +03:00 [INF] Executed action University.API.Controllers.CoursesController.GetAll (University.API) in 538.034ms
+2026-06-28 21:31:00.726 +03:00 [INF] Executed endpoint 'University.API.Controllers.CoursesController.GetAll (University.API)'
+2026-06-28 21:31:00.730 +03:00 [INF] Source:[127.0.0.1] Request: GET https localhost:7041/api/Courses   Responded with [200] in 546ms
+2026-06-28 21:31:00.730 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Courses - 200 296 application/json 553.7648ms
+2026-06-28 21:31:12.040 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Courses/2 - null null
+2026-06-28 21:31:12.041 +03:00 [INF] Executing endpoint 'University.API.Controllers.CoursesController.GetById (University.API)'
+2026-06-28 21:31:12.045 +03:00 [INF] Route matched with {action = "GetById", controller = "Courses"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetById(Int32) on controller University.API.Controllers.CoursesController (University.API).
+2026-06-28 21:31:12.048 +03:00 [INF] Incoming request: GET /api/courses/2
+2026-06-28 21:31:12.049 +03:00 [INF] Attempting to retrieve course with ID: 2
+2026-06-28 21:31:12.228 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[Weight]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-28 21:31:12.229 +03:00 [INF] Successfully retrieved course with ID: 2
+2026-06-28 21:31:12.229 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-28 21:31:12.229 +03:00 [INF] Executed action University.API.Controllers.CoursesController.GetById (University.API) in 184.3998ms
+2026-06-28 21:31:12.229 +03:00 [INF] Executed endpoint 'University.API.Controllers.CoursesController.GetById (University.API)'
+2026-06-28 21:31:12.230 +03:00 [INF] Source:[127.0.0.1] Request: GET https localhost:7041/api/Courses/2   Responded with [200] in 188ms
+2026-06-28 21:31:12.230 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Courses/2 - 200 272 application/json 190.7223ms
+2026-06-28 21:31:23.987 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7041/api/Courses/2 - application/json 36
+2026-06-28 21:31:23.989 +03:00 [INF] Executing endpoint 'University.API.Controllers.CoursesController.Update (University.API)'
+2026-06-28 21:31:23.991 +03:00 [INF] Route matched with {action = "Update", controller = "Courses"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Update(Int32, University.Core.Forms.UpdateCourseForm) on controller University.API.Controllers.CoursesController (University.API).
+2026-06-28 21:31:23.999 +03:00 [INF] Incoming request: PUT /api/courses/2
+2026-06-28 21:31:24.000 +03:00 [INF] Attempting to update course with ID: 2
+2026-06-28 21:31:24.015 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[Weight]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-28 21:31:24.031 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Courses] SET [Name] = @p0, [Weight] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2026-06-28 21:31:24.032 +03:00 [INF] Successfully updated course with ID: 2
+2026-06-28 21:31:24.032 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-28 21:31:24.032 +03:00 [INF] Executed action University.API.Controllers.CoursesController.Update (University.API) in 41.0344ms
+2026-06-28 21:31:24.032 +03:00 [INF] Executed endpoint 'University.API.Controllers.CoursesController.Update (University.API)'
+2026-06-28 21:31:24.033 +03:00 [INF] Source:[127.0.0.1] Request: PUT https localhost:7041/api/Courses/2  {
+  "name": "CSS",
+  "weight": 100
+} Responded with [200] in 44ms
+2026-06-28 21:31:24.033 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7041/api/Courses/2 - 200 237 application/json 46.0042ms
+2026-06-28 21:31:25.966 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7041/api/Courses/2 - application/json 36
+2026-06-28 21:31:25.967 +03:00 [INF] Executing endpoint 'University.API.Controllers.CoursesController.Update (University.API)'
+2026-06-28 21:31:25.967 +03:00 [INF] Route matched with {action = "Update", controller = "Courses"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Update(Int32, University.Core.Forms.UpdateCourseForm) on controller University.API.Controllers.CoursesController (University.API).
+2026-06-28 21:31:25.968 +03:00 [INF] Incoming request: PUT /api/courses/2
+2026-06-28 21:31:25.968 +03:00 [INF] Attempting to update course with ID: 2
+2026-06-28 21:31:25.973 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[Weight]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-28 21:31:25.975 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Courses] SET [Name] = @p0, [Weight] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2026-06-28 21:31:25.976 +03:00 [INF] Successfully updated course with ID: 2
+2026-06-28 21:31:25.976 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-28 21:31:25.976 +03:00 [INF] Executed action University.API.Controllers.CoursesController.Update (University.API) in 9.18ms
+2026-06-28 21:31:25.976 +03:00 [INF] Executed endpoint 'University.API.Controllers.CoursesController.Update (University.API)'
+2026-06-28 21:31:25.977 +03:00 [INF] Source:[127.0.0.1] Request: PUT https localhost:7041/api/Courses/2  {
+  "name": "CSS",
+  "weight": 100
+} Responded with [200] in 10ms
+2026-06-28 21:31:25.977 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7041/api/Courses/2 - 200 237 application/json 11.5055ms
+2026-06-28 21:31:33.504 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7041/api/Courses/2 - null null
+2026-06-28 21:31:33.504 +03:00 [INF] Executing endpoint 'University.API.Controllers.CoursesController.Delete (University.API)'
+2026-06-28 21:31:33.506 +03:00 [INF] Route matched with {action = "Delete", controller = "Courses"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Delete(Int32) on controller University.API.Controllers.CoursesController (University.API).
+2026-06-28 21:31:33.507 +03:00 [INF] Incoming request: DELETE /api/courses/2
+2026-06-28 21:31:33.507 +03:00 [INF] Attempting to delete course with ID: 2
+2026-06-28 21:31:33.509 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[Weight]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-28 21:31:33.523 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Courses]
+OUTPUT 1
+WHERE [Id] = @p0;
+2026-06-28 21:31:33.529 +03:00 [INF] Successfully deleted course with ID: 2
+2026-06-28 21:31:33.529 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-28 21:31:33.530 +03:00 [INF] Executed action University.API.Controllers.CoursesController.Delete (University.API) in 23.3203ms
+2026-06-28 21:31:33.530 +03:00 [INF] Executed endpoint 'University.API.Controllers.CoursesController.Delete (University.API)'
+2026-06-28 21:31:33.531 +03:00 [INF] Source:[127.0.0.1] Request: DELETE https localhost:7041/api/Courses/2   Responded with [200] in 27ms
+2026-06-28 21:31:33.532 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7041/api/Courses/2 - 200 240 application/json 28.016ms
+2026-06-28 21:32:24.744 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Students/99 - null null
+2026-06-28 21:32:24.782 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.GetById (University.API)'
+2026-06-28 21:32:24.785 +03:00 [INF] Route matched with {action = "GetById", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetById(Int32) on controller University.API.Controllers.StudentsController (University.API).
+2026-06-28 21:32:24.796 +03:00 [INF] Incoming request: GET /api/students/99
+2026-06-28 21:32:24.797 +03:00 [INF] Attempting to retrieve student with ID: 99
+2026-06-28 21:32:24.838 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__p_0
+2026-06-28 21:32:24.838 +03:00 [WRN] Student with ID: 99 not found
+2026-06-28 21:36:09.366 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-28 21:36:09.404 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/swagger/index.html - null null
+2026-06-28 21:36:09.411 +03:00 [INF] Executed action University.API.Controllers.StudentsController.GetById (University.API) in 224626.2033ms
+2026-06-28 21:36:09.411 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.GetById (University.API)'
+2026-06-28 21:36:09.443 +03:00 [INF] Source:[127.0.0.1] Request: GET https localhost:7041/api/Students/99   Responded with [404] in 224662ms
+2026-06-28 21:36:09.443 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Students/99 - 404 135 application/json 224699.4844ms
+2026-06-28 21:36:09.451 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/swagger/index.html - 200 null text/html;charset=utf-8 47.0019ms
+2026-06-28 21:36:09.541 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/_vs/browserLink - null null
+2026-06-28 21:36:09.543 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-28 21:36:09.547 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/_framework/aspnetcore-browser-refresh.js - 200 14895 application/javascript; charset=utf-8 4.7686ms
+2026-06-28 21:36:09.594 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.1174ms
+2026-06-28 21:36:09.863 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/swagger/v1/swagger.json - null null
+2026-06-28 21:36:09.898 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.7739ms
+2026-06-28 21:36:23.959 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7041/api/Students/9 - application/json 53
+2026-06-28 21:36:23.960 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.Update (University.API)'
+2026-06-28 21:36:23.965 +03:00 [INF] Route matched with {action = "Update", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Update(Int32, University.Core.Forms.UpdateStudentForm) on controller University.API.Controllers.StudentsController (University.API).
+2026-06-28 21:36:23.975 +03:00 [INF] Incoming request: PUT /api/students/9
+2026-06-28 21:36:23.977 +03:00 [INF] Attempting to update student with ID: 9
+2026-06-28 21:36:23.996 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__p_0
+2026-06-28 21:36:23.996 +03:00 [WRN] Student with ID: 9 not found for update
+2026-06-28 21:36:26.144 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-28 21:36:26.145 +03:00 [INF] Executed action University.API.Controllers.StudentsController.Update (University.API) in 2179.4878ms
+2026-06-28 21:36:26.145 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.Update (University.API)'
+2026-06-28 21:36:26.154 +03:00 [INF] Source:[127.0.0.1] Request: PUT https localhost:7041/api/Students/9  {
+  "name": "string",
+  "email": "user@example.com"
+} Responded with [404] in 2193ms
+2026-06-28 21:36:26.154 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7041/api/Students/9 - 404 286 application/json 2195.0074ms
+2026-06-28 21:37:25.153 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Students - application/json 39
+2026-06-28 21:37:25.156 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.Create (University.API)'
+2026-06-28 21:37:25.158 +03:00 [INF] Route matched with {action = "Create", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Create(University.Core.Forms.CreateStudentForm) on controller University.API.Controllers.StudentsController (University.API).
+2026-06-28 21:37:25.169 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-06-28 21:37:25.191 +03:00 [INF] Executed action University.API.Controllers.StudentsController.Create (University.API) in 32.7994ms
+2026-06-28 21:37:25.192 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.Create (University.API)'
+2026-06-28 21:37:25.193 +03:00 [INF] Source:[127.0.0.1] Request: POST https localhost:7041/api/Students  {
+  "name": "N",
+  "email": "a@b.com"
+} Responded with [400] in 38ms
+2026-06-28 21:37:25.193 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Students - 400 423 application/json 39.709ms
+2026-06-28 21:37:53.309 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Students - application/json 51
+2026-06-28 21:37:53.311 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.Create (University.API)'
+2026-06-28 21:37:53.311 +03:00 [INF] Route matched with {action = "Create", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Create(University.Core.Forms.CreateStudentForm) on controller University.API.Controllers.StudentsController (University.API).
+2026-06-28 21:37:53.312 +03:00 [INF] Incoming request: POST /api/students
+2026-06-28 21:37:53.313 +03:00 [INF] Attempting to create student with Name: Nawar, Email: nawar@gmail.com
+2026-06-28 21:37:53.348 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@__email_0='?' (Size = 150)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Email] = @__email_0
+2026-06-28 21:37:53.370 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 150), @p1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Students] ([Email], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2026-06-28 21:37:53.373 +03:00 [INF] Successfully created student with ID: 3
+2026-06-28 21:37:53.373 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-28 21:37:53.374 +03:00 [INF] Executed action University.API.Controllers.StudentsController.Create (University.API) in 62.4605ms
+2026-06-28 21:37:53.374 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.Create (University.API)'
+2026-06-28 21:37:53.374 +03:00 [INF] Source:[127.0.0.1] Request: POST https localhost:7041/api/Students  {
+  "name": "Nawar",
+  "email": "nawar@gmail.com"
+} Responded with [200] in 63ms
+2026-06-28 21:37:53.374 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Students - 200 239 application/json 65.6291ms
+2026-06-28 21:37:55.994 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7041/api/Students - application/json 51
+2026-06-28 21:37:55.995 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.Create (University.API)'
+2026-06-28 21:37:55.995 +03:00 [INF] Route matched with {action = "Create", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Create(University.Core.Forms.CreateStudentForm) on controller University.API.Controllers.StudentsController (University.API).
+2026-06-28 21:37:55.996 +03:00 [INF] Incoming request: POST /api/students
+2026-06-28 21:37:55.996 +03:00 [INF] Attempting to create student with Name: Nawar, Email: nawar@gmail.com
+2026-06-28 21:37:55.999 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 150)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Email] = @__email_0
+2026-06-28 21:37:55.999 +03:00 [WRN] Duplicate email submitted: nawar@gmail.com
+2026-06-28 21:37:59.549 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-28 21:37:59.549 +03:00 [INF] Executed action University.API.Controllers.StudentsController.Create (University.API) in 3554.401ms
+2026-06-28 21:37:59.549 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.Create (University.API)'
+2026-06-28 21:37:59.550 +03:00 [INF] Source:[127.0.0.1] Request: POST https localhost:7041/api/Students  {
+  "name": "Nawar",
+  "email": "nawar@gmail.com"
+} Responded with [400] in 3555ms
+2026-06-28 21:37:59.550 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7041/api/Students - 400 337 application/json 3556.0541ms
+2026-06-28 21:38:53.073 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7041/api/Courses/9 - null null
+2026-06-28 21:38:53.074 +03:00 [INF] Executing endpoint 'University.API.Controllers.CoursesController.GetById (University.API)'
+2026-06-28 21:38:53.074 +03:00 [INF] Route matched with {action = "GetById", controller = "Courses"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetById(Int32) on controller University.API.Controllers.CoursesController (University.API).
+2026-06-28 21:38:53.074 +03:00 [INF] Incoming request: GET /api/courses/9
+2026-06-28 21:38:53.075 +03:00 [INF] Attempting to retrieve course with ID: 9
+2026-06-28 21:38:53.083 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[Weight]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-28 21:38:53.083 +03:00 [WRN] Course with ID: 9 not found
+2026-06-28 21:38:57.569 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-28 21:38:57.570 +03:00 [INF] Executed action University.API.Controllers.CoursesController.GetById (University.API) in 4495.8828ms
+2026-06-28 21:38:57.570 +03:00 [INF] Executed endpoint 'University.API.Controllers.CoursesController.GetById (University.API)'
+2026-06-28 21:38:57.570 +03:00 [INF] Source:[127.0.0.1] Request: GET https localhost:7041/api/Courses/9   Responded with [404] in 4496ms
+2026-06-28 21:38:57.570 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7041/api/Courses/9 - 404 285 application/json 4497.3437ms
+2026-06-28 21:39:12.388 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7041/api/Courses/1 - null null
+2026-06-28 21:39:12.388 +03:00 [INF] Executing endpoint 'University.API.Controllers.CoursesController.Delete (University.API)'
+2026-06-28 21:39:12.388 +03:00 [INF] Route matched with {action = "Delete", controller = "Courses"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Delete(Int32) on controller University.API.Controllers.CoursesController (University.API).
+2026-06-28 21:39:12.389 +03:00 [INF] Incoming request: DELETE /api/courses/1
+2026-06-28 21:39:12.389 +03:00 [INF] Attempting to delete course with ID: 1
+2026-06-28 21:39:12.399 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[Weight]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+2026-06-28 21:39:12.400 +03:00 [WRN] Course with ID: 1 not found for deletion
+2026-06-28 21:39:14.324 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-28 21:39:14.326 +03:00 [INF] Executed action University.API.Controllers.CoursesController.Delete (University.API) in 1937.3931ms
+2026-06-28 21:39:14.326 +03:00 [INF] Executed endpoint 'University.API.Controllers.CoursesController.Delete (University.API)'
+2026-06-28 21:39:14.327 +03:00 [INF] Source:[127.0.0.1] Request: DELETE https localhost:7041/api/Courses/1   Responded with [404] in 1938ms
+2026-06-28 21:39:14.327 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7041/api/Courses/1 - 404 285 application/json 1939.9705ms
